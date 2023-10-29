@@ -4,7 +4,7 @@
 
 Check out our carefully selected list of **basic** and **advanced** Divide & Conquer questions and answers to be well-prepared for your tech interviews in 2024.
 
-![Divide & Conquer Decorative Image](https://storage.googleapis.com/dev-stack-app.appspot.com/blogImg/divideAndConquer.png?GoogleAccessId=firebase-adminsdk-bgeaf%40dev-stack-app.iam.gserviceaccount.com&Expires=1698605214&Signature=fCCoq%2Fs8Nad9vtjaqmJ0EtiacRYest0Bj3BDf4MJ2qjoPFaYgGEhyN%2FxMC5%2FmueWYQwLrfxynOgkLtmiOu1%2Fcby%2BNhGLi4mQQLx64ur426%2BAPv8CJBx6554%2BoSB6kKnjdZ%2F5fISISPl6LfZ9661l3o%2F9M9hyaIE0XUhW1SGztluPzLuD%2B647gp0usFUjvdeNknWavW0BkbjtddHRgLchPFYHHyezE%2FWBu1f40hxpM09JrCN4voJ2RhfluUh9tipqOmL%2BwCA%2FeW5pzSz7hBenUf2KECjsNmgsINzNYDUOx0CTdHIvNCLw8unEz%2BlOmTAaltnakWgOEyy96f%2F8uI4zIw%3D%3D)
+![Divide & Conquer Decorative Image](https://firebasestorage.googleapis.com/v0/b/dev-stack-app.appspot.com/o/blogImg%2FdivideAndConquer.png?alt=media&token=deeee7b0-d0c0-4a05-ac2b-e56eea28df8e&_gl=1*b8o1ha*_ga*OTYzMjY5NTkwLjE2ODg4NDM4Njg.*_ga_CW55HF8NVT*MTY5ODYwNTk1NS4xOTAuMS4xNjk4NjA3MzE2LjM5LjAuMA..)
 
 👉🏼 You can also find all answers here: [Devinterview.io - Divide & Conquer](https://devinterview.io/data/divideAndConquer-interview-questions)
 
