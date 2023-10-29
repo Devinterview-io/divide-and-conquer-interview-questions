@@ -1,254 +1,251 @@
-<div data-v-5e9078c0="" data-v-b06dc010="" class="QuestionsList"><div data-v-5e9078c0=""><h1 data-v-5e9078c0="">
-      Top 6 Divide &amp; Conquer interview
-      questions and answers in 2021.
-    </h1> <p data-v-5e9078c0="" align="center"><a data-v-5e9078c0="" href="https://devinterview.io/"><img data-v-5e9078c0="" src="https://source.unsplash.com/collection/52661698/700x350"></a></p> <p data-v-5e9078c0="">
-      You can check all
-      6
-      Divide &amp; Conquer interview questions here 👉
-      https://devinterview.io/data/divideAndConquer-interview-questions
-    </p> <br data-v-5e9078c0=""> <div data-v-5e9078c0="" class="unit"><div><h2>🔹 1. What is the difference between Divide and Conquer and Dynamic Programming Algorithms?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p><strong>Dynamic programming</strong> is an extension of <strong>Divide and Conquer</strong> paradigm. </p><ul><li>They both work by recursively breaking down a problem into two or more sub-problems. The solutions to the sub-problems are then combined to give a solution to the original problem.</li><li>In Divide and conquer the sub-problems are <em>independent</em> of each other. Mergesort is a classic example of divide and conquer. The main difference between this example and the Fibonacci example is that in a mergesort, the division can (theoretically) be arbitrary, and no matter how you slice it up, you are still merging and sorting.</li><li>In dynamic programming the sub-problem are not independent. So to calculate new Fib number you have to know two previous values. For Merge sort you don't need to know the sorting order of previously sorted sub-array to sort another one.</li><li>Dynamic programming approach may be applied to the problem only if the problem has certain restrictions or prerequisites:</li><li><strong>Optimal substructure</strong> — optimal solution can be constructed from optimal solutions of its subproblems</li><li><strong>Overlapping sub-problems</strong> — problem can be broken down into subproblems which are <em>reused several times</em> or a recursive algorithm for the problem solves the same subproblem over and over rather than always generating new subproblems.</li><li>Dynamic programming approach extends divide and conquer approach with two techniques:<ul><li>memoization (top-down cache filling)</li></ul></li><li>tabulation (bottom-up cache filling)</li></ul><p></p><div><div><div><div></div></div></div></div><p></p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/13538459/difference-between-divide-and-conquer-algo-and-dynamic-programming" rel="noreferrer" target="_blank" title="What is the difference between Divide and Conquer and Dynamic Programming Algorithms? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 2. Explain how Merge Sort works</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p><strong>Merge sort</strong> is a <em>divide-and-conquer</em>, <em>comparison-based</em> sorting algorithm based on the idea of breaking down a list into several sub-lists until each sublist consists of a single element and merging those sublists in a manner that results into a sorted list. Most implementations produce a <em>stable</em> sort, which means that the order of equal elements is the same in the input and output. Can be used as <em>external</em> sorting (when the data to be sorted is too large to fit into memory).</p><br><p></p><div><div><div><div></div></div></div></div><p></p><p>There are two methods for implementing a Merge Sort algorithm:</p><ul><li>The <strong>Top-Down (recursive)</strong> approach. Given an array of size N, the algorithm recursively breaks the array in half and then merges the results together.</li><li>The <strong>Bottom-Up (iterative)</strong> approach. Rather than breaking the overall array into distinct pieces, bottum-up mergesort loops over the array using intervals of varying sizes. Each interval is sorted and merged together; subsequent loops over the array have larger intervals, effectively merging our previously sorted (smaller) intervals together.</li></ul></div></div><div><div class="mb-2 mt-2"><span class="h5">Complexity Analysis</span></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Time:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(n)</div></div><div class="col text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text selected-complexity effect7">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Space:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text selected-complexity effect7">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-large"><p><b>Time:</b> <mark>O(n log n)</mark></p><p><b>Space:</b> <mark>O(n)</mark></p></div><div class="mt-3"><div><div class="AnswerBody"><p>The list of size <code>n</code> is divided into a max of <code>log n</code> parts (the height of the conquer step tree is <code>log n + 1</code> for a given <code>n</code>), and the merging of all sublists into a single list takes <code>O(n)</code> time, the worst case run time of this algorithm is <code>O(n log n)</code>.</p><div><div>
-<img src="https://i.stack.imgur.com/33vP2.jpg" class="img-fluid img-max">
-</div></div><p>Space complexity is always <code>Ω(n)</code> as you have to store the elements somewhere. Additional space complexity can be <code>O(n)</code> in an implementation using arrays and <code>O(1)</code> in linked list implementations. In practice implementations using lists need additional space for list pointers, so unless you already have the list in memory it shouldn't matter.</p></div></div></div></div><div style="font-size: 14px;"><div class="mb-3 mt-2"><span class="h5">Implementation</span></div><div><nav class="mdc-tab-bar"><div class="mdc-tab-scroller"><div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;"><div class="mdc-tab-scroller__scroll-content"><button class="mdc-ripple-upgraded mdc-ripple-upgraded--background-focused mdc-tab mdc-tab--min-width mdc-tab--active" aria-selected="true" tabindex="0"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>JavaScript</span>&nbsp;<span class="shadow-text lang-badge js">JS</span></span></div><span class="mdc-tab-indicator mdc-tab-indicator--active"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded mdc-ripple-upgraded--background-focused"></div></button><button class="mdc-ripple-upgraded mdc-tab mdc-tab--min-width"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Python</span>&nbsp;<span class="shadow-text lang-badge py">PY</span></span></div><span class="mdc-tab-indicator"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded"></div></button></div></div></div></nav></div><div class="mt-2"><div class="AnswerBody"><p>The <strong>Top-Down (recursive)</strong> approach</p><pre><code><span class="token cVar">function</span> <span class="token cMod">mergeSort</span><span class="token cBase">(</span><span class="token parameter">arr</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cVar">if</span> <span class="token cBase">(</span>arr<span class="token cBase">.</span>length <span class="token cBase">&lt;</span> <span class="token cNum">2</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">return</span> arr<span class="token cBase">;</span>
-  <span class="token cBase">}</span>
-  
-  <span class="token cVar">let</span> midpoint <span class="token cBase">=</span> Math<span class="token cBase">.</span><span class="token cMod">floor</span><span class="token cBase">(</span>arr<span class="token cBase">.</span>length <span class="token cBase">/</span> <span class="token cNum">2</span><span class="token cBase">)</span><span class="token cBase">;</span>
-  <span class="token cVar">let</span> leftHalf <span class="token cBase">=</span> arr<span class="token cBase">.</span><span class="token cMod">slice</span><span class="token cBase">(</span><span class="token cNum">0</span><span class="token cBase">,</span> midpoint<span class="token cBase">)</span><span class="token cBase">;</span> <span class="token cComment">//slice an array of left-half items</span>
-  <span class="token cVar">let</span> rightHalf <span class="token cBase">=</span> arr<span class="token cBase">.</span><span class="token cMod">slice</span><span class="token cBase">(</span>midpoint<span class="token cBase">)</span><span class="token cBase">;</span> <span class="token cComment">//slice an array of right-half items</span>
-  
-  <span class="token cComment">//recurse into each half until arrays are 1 item each</span>
-  <span class="token cComment">//then merge() the sorted arrays on each layer of the stack</span>
-  <span class="token cVar">return</span> <span class="token cMod">merge</span><span class="token cBase">(</span><span class="token cMod">mergeSort</span><span class="token cBase">(</span>leftHalf<span class="token cBase">)</span><span class="token cBase">,</span> <span class="token cMod">mergeSort</span><span class="token cBase">(</span>rightHalf<span class="token cBase">)</span><span class="token cBase">)</span><span class="token cBase">;</span>
-<span class="token cBase">}</span>
+# ⚫ Divide & Conquer in Tech Interviews 2024: 6 Must-Know Questions & Answers
 
-<span class="token cComment">//first time this merge() gets called, the arr's are both 1 element long</span>
-<span class="token cComment">//on each layer of the stack the arrs will be doubled and always be sorted</span>
-<span class="token cVar">function</span> <span class="token cMod">merge</span><span class="token cBase">(</span><span class="token parameter">arrA<span class="token cBase">,</span> arrB</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cVar">let</span> a <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span>
-  <span class="token cVar">let</span> b <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span>
-  <span class="token cVar">let</span> result <span class="token cBase">=</span> <span class="token cBase">[</span><span class="token cBase">]</span><span class="token cBase">;</span>
-  
-  <span class="token cVar">while</span> <span class="token cBase">(</span>a <span class="token cBase">&lt;</span> arrA<span class="token cBase">.</span>length <span class="token cBase">&amp;&amp;</span> b <span class="token cBase">&lt;</span> arrB<span class="token cBase">.</span>length<span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span>arrA<span class="token cBase">[</span>a<span class="token cBase">]</span> <span class="token cBase">&lt;</span> arrB<span class="token cBase">[</span>b<span class="token cBase">]</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-      result<span class="token cBase">.</span><span class="token cMod">push</span><span class="token cBase">(</span>arrA<span class="token cBase">[</span>a<span class="token cBase">]</span><span class="token cBase">)</span><span class="token cBase">;</span>
-      a<span class="token cBase">++</span><span class="token cBase">;</span>
-    <span class="token cBase">}</span> <span class="token cVar">else</span> <span class="token cBase">{</span>
-      result<span class="token cBase">.</span><span class="token cMod">push</span><span class="token cBase">(</span>arrB<span class="token cBase">[</span>b<span class="token cBase">]</span><span class="token cBase">)</span><span class="token cBase">;</span>
-      b<span class="token cBase">++</span><span class="token cBase">;</span>
-    <span class="token cBase">}</span>
-  <span class="token cBase">}</span>
+**Divide and Conquer** is an algorithmic approach that breaks problems into smaller subproblems, solves them, and then combines their solutions. In coding interviews, it's used to evaluate a candidate's skill in problem decomposition and understanding of **recursive strategies**.
 
-  <span class="token cComment">//using slice to concat remaining items left in either arrA or arrB</span>
-  <span class="token cVar">return</span> result<span class="token cBase">.</span><span class="token cMod">concat</span><span class="token cBase">(</span>arrA<span class="token cBase">.</span><span class="token cMod">slice</span><span class="token cBase">(</span>a<span class="token cBase">)</span><span class="token cBase">)</span><span class="token cBase">.</span><span class="token cMod">concat</span><span class="token cBase">(</span>arrB<span class="token cBase">.</span><span class="token cMod">slice</span><span class="token cBase">(</span>b<span class="token cBase">)</span><span class="token cBase">)</span><span class="token cBase">;</span> 
-<span class="token cBase">}</span>
+Check out our carefully selected list of **basic** and **advanced** Divide & Conquer questions and answers to be well-prepared for your tech interviews in 2024.
 
-<span class="token cComment">//usage:</span>
-<span class="token cMod">mergeSort</span><span class="token cBase">(</span><span class="token cBase">[</span><span class="token cNum">4</span><span class="token cBase">,</span><span class="token cNum">2</span><span class="token cBase">,</span><span class="token cNum">8</span><span class="token cBase">,</span><span class="token cNum">3</span><span class="token cBase">,</span><span class="token cNum">6</span><span class="token cBase">,</span><span class="token cNum">9</span><span class="token cBase">,</span><span class="token cNum">1</span><span class="token cBase">]</span><span class="token cBase">)</span><span class="token cBase">;</span> <span class="token cComment">//=&gt; [1,2,3,4,6,8,9]</span></code></pre><p>The <strong>Bottom-Up (iterative)</strong> approach</p><pre><code><span class="token cVar">function</span> <span class="token cMod">mergeSort</span><span class="token cBase">(</span><span class="token parameter">arr</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">var</span> sorted <span class="token cBase">=</span> arr<span class="token cBase">.</span><span class="token cMod">slice</span><span class="token cBase">(</span><span class="token cBase">)</span><span class="token cBase">,</span>
-        n <span class="token cBase">=</span> sorted<span class="token cBase">.</span>length<span class="token cBase">,</span>
-        buffer <span class="token cBase">=</span> <span class="token cVar">new</span> <span class="token class-name">Array</span><span class="token cBase">(</span>n<span class="token cBase">)</span><span class="token cBase">;</span>
+![Divide & Conquer Decorative Image](https://storage.googleapis.com/dev-stack-app.appspot.com/blogImg/divideAndConquer.png?GoogleAccessId=firebase-adminsdk-bgeaf%40dev-stack-app.iam.gserviceaccount.com&Expires=1698605214&Signature=fCCoq%2Fs8Nad9vtjaqmJ0EtiacRYest0Bj3BDf4MJ2qjoPFaYgGEhyN%2FxMC5%2FmueWYQwLrfxynOgkLtmiOu1%2Fcby%2BNhGLi4mQQLx64ur426%2BAPv8CJBx6554%2BoSB6kKnjdZ%2F5fISISPl6LfZ9661l3o%2F9M9hyaIE0XUhW1SGztluPzLuD%2B647gp0usFUjvdeNknWavW0BkbjtddHRgLchPFYHHyezE%2FWBu1f40hxpM09JrCN4voJ2RhfluUh9tipqOmL%2BwCA%2FeW5pzSz7hBenUf2KECjsNmgsINzNYDUOx0CTdHIvNCLw8unEz%2BlOmTAaltnakWgOEyy96f%2F8uI4zIw%3D%3D)
 
-    <span class="token cVar">for</span> <span class="token cBase">(</span><span class="token cVar">var</span> size <span class="token cBase">=</span> <span class="token cNum">1</span><span class="token cBase">;</span> size <span class="token cBase">&lt;</span> n<span class="token cBase">;</span> size <span class="token cBase">*=</span> <span class="token cNum">2</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-        <span class="token cVar">for</span> <span class="token cBase">(</span><span class="token cVar">var</span> leftStart <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span> leftStart <span class="token cBase">&lt;</span> n<span class="token cBase">;</span> leftStart <span class="token cBase">+=</span> <span class="token cNum">2</span> <span class="token cBase">*</span> size<span class="token cBase">)</span> <span class="token cBase">{</span>
-            <span class="token cVar">var</span> left <span class="token cBase">=</span> leftStart<span class="token cBase">,</span>
-                right <span class="token cBase">=</span> Math<span class="token cBase">.</span><span class="token cMod">min</span><span class="token cBase">(</span>left <span class="token cBase">+</span> size<span class="token cBase">,</span> n<span class="token cBase">)</span><span class="token cBase">,</span>
-                leftLimit <span class="token cBase">=</span> right<span class="token cBase">,</span>
-                rightLimit <span class="token cBase">=</span> Math<span class="token cBase">.</span><span class="token cMod">min</span><span class="token cBase">(</span>right <span class="token cBase">+</span> size<span class="token cBase">,</span> n<span class="token cBase">)</span><span class="token cBase">,</span>
-                i <span class="token cBase">=</span> left<span class="token cBase">;</span>
-            <span class="token cVar">while</span> <span class="token cBase">(</span>left <span class="token cBase">&lt;</span> leftLimit <span class="token cBase">&amp;&amp;</span> right <span class="token cBase">&lt;</span> rightLimit<span class="token cBase">)</span> <span class="token cBase">{</span>
-                <span class="token cVar">if</span> <span class="token cBase">(</span>sorted<span class="token cBase">[</span>left<span class="token cBase">]</span> <span class="token cBase">&lt;=</span> sorted<span class="token cBase">[</span>right<span class="token cBase">]</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-                    buffer<span class="token cBase">[</span>i<span class="token cBase">++</span><span class="token cBase">]</span> <span class="token cBase">=</span> sorted<span class="token cBase">[</span>left<span class="token cBase">++</span><span class="token cBase">]</span><span class="token cBase">;</span>
-                <span class="token cBase">}</span> <span class="token cVar">else</span> <span class="token cBase">{</span>
-                    buffer<span class="token cBase">[</span>i<span class="token cBase">++</span><span class="token cBase">]</span> <span class="token cBase">=</span> sorted<span class="token cBase">[</span>right<span class="token cBase">++</span><span class="token cBase">]</span><span class="token cBase">;</span>
-                <span class="token cBase">}</span>
-            <span class="token cBase">}</span>
-            <span class="token cVar">while</span> <span class="token cBase">(</span>left <span class="token cBase">&lt;</span> leftLimit<span class="token cBase">)</span> <span class="token cBase">{</span>
-                buffer<span class="token cBase">[</span>i<span class="token cBase">++</span><span class="token cBase">]</span> <span class="token cBase">=</span> sorted<span class="token cBase">[</span>left<span class="token cBase">++</span><span class="token cBase">]</span><span class="token cBase">;</span>
-            <span class="token cBase">}</span>
-            <span class="token cVar">while</span> <span class="token cBase">(</span>right <span class="token cBase">&lt;</span> rightLimit<span class="token cBase">)</span> <span class="token cBase">{</span>
-                buffer<span class="token cBase">[</span>i<span class="token cBase">++</span><span class="token cBase">]</span> <span class="token cBase">=</span> sorted<span class="token cBase">[</span>right<span class="token cBase">++</span><span class="token cBase">]</span><span class="token cBase">;</span>
-            <span class="token cBase">}</span>
-        <span class="token cBase">}</span>
-        <span class="token cVar">var</span> temp <span class="token cBase">=</span> sorted<span class="token cBase">,</span>
-            sorted <span class="token cBase">=</span> buffer<span class="token cBase">,</span>
-            buffer <span class="token cBase">=</span> temp<span class="token cBase">;</span>
-    <span class="token cBase">}</span>
+👉🏼 You can also find all answers here: [Devinterview.io - Divide & Conquer](https://devinterview.io/data/divideAndConquer-interview-questions)
 
-    <span class="token cVar">return</span> sorted<span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre></div></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.akawebdesign.com/2012/04/13/javascript-mergesort-top-down-vs-bottom-up/" rel="noreferrer" target="_blank" title="Explain how Merge Sort works Interview Questions Source To Answer">www.akawebdesign.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 3. Convert a Binary Tree to a Doubly Linked List</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>This can be achieved by traversing the tree in the <strong>in-order</strong> manner that is, left the <code>child -&gt; root -&gt;right</code> node. </p><p></p><div><div><div><div></div></div></div></div><p></p><p>In an in-order traversal, first the left sub-tree is traversed, then the root is visited, and finally the right sub-tree is traversed.</p><p>One simple way of solving this problem is to start with an empty doubly linked list. While doing the in-order traversal of the binary tree, keep inserting each element output into the doubly linked list. But, if we look at the question carefully, the interviewer wants us to convert the binary tree to a doubly linked list <strong>in-place</strong> i.e. we should not create new nodes for the doubly linked list.</p><p>This problem can be solved recursively using a divide and conquer approach. Below is the algorithm specified.</p><ul><li>Start with the root node and solve left and right sub-trees recursively</li><li>At each step, once left and right sub-trees have been processed:<ul><li>fuse output of left subtree with root to make the intermediate result</li><li>fuse intermediate result (built in the previous step) with output from the right sub-tree to make the final result of the current recursive call</li></ul></li></ul></div></div><div><div class="mb-2 mt-2"><span class="h5">Complexity Analysis</span></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Time:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text selected-complexity effect7">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Space:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text selected-complexity effect7">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-large"><p><b>Time:</b> <mark>O(n)</mark></p><p><b>Space:</b> <mark>O(n)</mark></p></div><div class="mt-3"><div><div class="AnswerBody"><p>Recursive solution has <code><i>O</i>(<i>h</i>)</code> memory complexity as it will consume memory on the stack up to the height of binary tree <code>h</code>. It will be <code><i>O</i>(<i>log n</i>)</code> for balanced tree and in worst case can be <code><i>O</i>(<i>n</i>)</code>.</p></div></div></div></div><div style="font-size: 14px;"><div class="mb-3 mt-2"><span class="h5">Implementation</span></div><div><nav class="mdc-tab-bar"><div class="mdc-tab-scroller"><div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;"><div class="mdc-tab-scroller__scroll-content"><button class="mdc-ripple-upgraded mdc-ripple-upgraded--background-focused mdc-tab mdc-tab--min-width mdc-tab--active" aria-selected="true" tabindex="0"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Java</span>&nbsp;<span class="shadow-text lang-badge java">Java</span></span></div><span class="mdc-tab-indicator mdc-tab-indicator--active"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded mdc-ripple-upgraded--background-focused"></div></button><button class="mdc-ripple-upgraded mdc-tab mdc-tab--min-width"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Python</span>&nbsp;<span class="shadow-text lang-badge py">PY</span></span></div><span class="mdc-tab-indicator"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded"></div></button></div></div></div></nav></div><div class="mt-2"><div class="AnswerBody"><pre><code><span class="token cVar">public</span> <span class="token cVar">static</span> <span class="token cVar">void</span> <span class="token class-name">BinaryTreeToDLL</span><span class="token cBase">(</span><span class="token class-name">Node</span> root<span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span>root <span class="token cBase">==</span> <span class="token cVar">null</span><span class="token cBase">)</span>
-        <span class="token cVar">return</span><span class="token cBase">;</span>
-    <span class="token class-name">BinaryTreeToDLL</span><span class="token cBase">(</span>root<span class="token cBase">.</span>left<span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span>prev <span class="token cBase">==</span> <span class="token cVar">null</span><span class="token cBase">)</span> <span class="token cBase">{</span> <span class="token cComment">// first node in list</span>
-        head <span class="token cBase">=</span> root<span class="token cBase">;</span>
-    <span class="token cBase">}</span> <span class="token cVar">else</span> <span class="token cBase">{</span>
-        prev<span class="token cBase">.</span>right <span class="token cBase">=</span> root<span class="token cBase">;</span>
-        root<span class="token cBase">.</span>left <span class="token cBase">=</span> prev<span class="token cBase">;</span>
-    <span class="token cBase">}</span>
-    prev <span class="token cBase">=</span> root<span class="token cBase">;</span>
-    <span class="token class-name">BinaryTreeToDLL</span><span class="token cBase">(</span>root<span class="token cBase">.</span>right<span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span>prev<span class="token cBase">.</span>right <span class="token cBase">==</span> <span class="token cVar">null</span><span class="token cBase">)</span> <span class="token cBase">{</span> <span class="token cComment">// last node in list</span>
-        head<span class="token cBase">.</span>left <span class="token cBase">=</span> prev<span class="token cBase">;</span>
-        prev<span class="token cBase">.</span>right <span class="token cBase">=</span> head<span class="token cBase">;</span>
-    <span class="token cBase">}</span>
-<span class="token cBase">}</span></code></pre></div></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.educative.io/m/convert-binary-tree-to-doubly-linked-list" rel="noreferrer" target="_blank" title="Convert a Binary Tree to a Doubly Linked List Interview Questions Source To Answer">www.educative.io</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 4. Compare Greedy vs Divide &amp; Conquer vs Dynamic Programming Algorithms</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>Consider:</p><table><thead><tr><th>Greedy</th><th>Divide &amp; Conquer</th><th>Dynamic Programming</th></tr></thead><tbody><tr><td>Optimises by making the best choice at the moment</td><td>Optimises by breaking down a subproblem into simpler versions of itself and using multi-threading &amp; recursion to solve</td><td>Same as Divide and Conquer, but optimises by caching the answers to each subproblem as not to repeat the calculation twice.</td></tr><tr><td>Doesn't always find the optimal solution, but is very fast</td><td>Always finds the optimal solution, but is slower than Greedy</td><td>Always finds the optimal solution, but could be pointless on small datasets.</td></tr><tr><td>Requires almost no memory</td><td>Requires some memory to remember recursive calls</td><td>Requires a lot of memory for memoisation / tabulation</td></tr></tbody></table></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://skerritt.blog/greedy-algorithms/" rel="noreferrer" target="_blank" title="Compare Greedy vs Divide &amp; Conquer vs Dynamic Programming Algorithms Interview Questions Source To Answer">skerritt.blog</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 5. Explain how QuickSort works</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p><strong>Quick Sort</strong> is a <em>divide and conquer</em>, <em>comparison</em>, <em>in-place</em> algorithm. Efficient implementations of Quicksort are <strong>not a stable</strong> sort. When implemented well, it can be about two or three times faster than its main competitors, merge sort and heapsort.</p><p><strong>Quicksort</strong> determines something called a <strong>pivot</strong>, which is a somewhat <em>arbitrary</em> element in the collection. Using the pivot point, quicksort <em>partitions</em> (or <em>divides</em>) the larger unsorted collection into two, smaller lists. It moves all the elements smaller than the pivot to the left (before) the pivot element, and moves all the elements larger than the pivot to the right (after) the pivot element. Even though the list isn’t completely sorted yet, we know that the items are in the correct order in relation to the pivot. This means that we never have to compare elements on the left side of the partition to elements on the right side of the partition. We already know they are in their correct spots in relation to the pivot. The sub-lists are then sorted <em>recursively</em>.</p><p></p><div><div><div><div></div></div></div></div><p></p><p>Ideally, partitioning would use the <em>median</em> of the given values (in the array), but the median can only be found by scanning the whole array and this would slow the algorithm down. In that case the two partitions would be of equal size; In the simplest versions of quick sort an arbitrary element, typically the <em>last (rightmost) element</em> is used as an estimate (guess) of the median.</p></div></div><div><div class="mb-2 mt-2"><span class="h5">Complexity Analysis</span></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Time:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(n)</div></div><div class="col text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text selected-complexity effect7">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Space:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text selected-complexity effect7">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-large"><p><b>Time:</b> <mark>O(n log n)</mark></p><p><b>Space:</b> <mark>O(log n)</mark></p></div><div class="mt-3"><div><div class="AnswerBody"><p>Overall time complexity of Quick Sort is <code><i>O</i>(<i>n log n</i>)</code>. In the worst case, it makes <code><i>O</i>(<i>n</i><sup>2</sup>)</code> comparisons (all elements are same or array is already sorted).</p><p>The partition step used in quicksort ideally is an in-place operation (without creating any additional arrays). But since quicksort calls itself on the order of <code>log(n)</code> times (in the average case), worst case number of calls is <code><i>O</i>(<i>n</i>)</code>, at each recursive call a new stack frame of constant size must be allocated. Hence the <code><i>O</i>(<i>log n</i>)</code> space complexity.</p></div></div></div></div><div style="font-size: 14px;"><div class="mb-3 mt-2"><span class="h5">Implementation</span></div><div><nav class="mdc-tab-bar"><div class="mdc-tab-scroller"><div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;"><div class="mdc-tab-scroller__scroll-content"><button class="mdc-ripple-upgraded mdc-ripple-upgraded--background-focused mdc-tab mdc-tab--min-width mdc-tab--active" aria-selected="true" tabindex="0"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>JavaScript</span>&nbsp;<span class="shadow-text lang-badge js">JS</span></span></div><span class="mdc-tab-indicator mdc-tab-indicator--active"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded mdc-ripple-upgraded--background-focused"></div></button><button class="mdc-ripple-upgraded mdc-tab mdc-tab--min-width"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Python</span>&nbsp;<span class="shadow-text lang-badge py">PY</span></span></div><span class="mdc-tab-indicator"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded"></div></button></div></div></div></nav></div><div class="mt-2"><div class="AnswerBody"><p>With additional memory (naive):</p><pre><code><span class="token cVar">function</span> <span class="token cMod">quickSort</span> <span class="token cBase">(</span><span class="token parameter">arr</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">if</span><span class="token cBase">(</span>arr<span class="token cBase">.</span>length <span class="token cBase">&lt;=</span> <span class="token cNum">1</span><span class="token cBase">)</span> <span class="token cVar">return</span> arr<span class="token cBase">;</span>
+---
 
-    <span class="token cComment">// find middle point of array (effectively random pivot) </span>
-    <span class="token cVar">var</span> swapPosition <span class="token cBase">=</span> Math<span class="token cBase">.</span><span class="token cMod">floor</span><span class="token cBase">(</span><span class="token cBase">(</span>arr<span class="token cBase">.</span>length <span class="token cBase">-</span><span class="token cNum">1</span><span class="token cBase">)</span> <span class="token cBase">/</span> <span class="token cNum">2</span><span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cVar">var</span> pivot <span class="token cBase">=</span> arr<span class="token cBase">.</span><span class="token cMod">splice</span><span class="token cBase">(</span>swapPosition<span class="token cBase">,</span> <span class="token cNum">1</span><span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cVar">var</span> left <span class="token cBase">=</span> <span class="token cBase">[</span><span class="token cBase">]</span><span class="token cBase">;</span>
-    <span class="token cVar">var</span> right <span class="token cBase">=</span> <span class="token cBase">[</span><span class="token cBase">]</span><span class="token cBase">;</span>
+## 🔹 1. What is the difference between _Divide and Conquer_ and _Dynamic Programming_ algorithms?
 
-    <span class="token cVar">for</span><span class="token cBase">(</span><span class="token cVar">var</span> i <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span> i <span class="token cBase">&lt;</span> arr<span class="token cBase">.</span>length<span class="token cBase">;</span> i<span class="token cBase">++</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-        <span class="token cVar">if</span><span class="token cBase">(</span>arr<span class="token cBase">[</span>i<span class="token cBase">]</span> <span class="token cBase">&lt;</span> pivot<span class="token cBase">)</span> <span class="token cBase">{</span>
-            left<span class="token cBase">.</span><span class="token cMod">push</span><span class="token cBase">(</span>arr<span class="token cBase">[</span>i<span class="token cBase">]</span><span class="token cBase">)</span><span class="token cBase">;</span>
-        <span class="token cBase">}</span> <span class="token cVar">else</span> <span class="token cBase">{</span>
-            right<span class="token cBase">.</span><span class="token cMod">push</span><span class="token cBase">(</span>arr<span class="token cBase">[</span>i<span class="token cBase">]</span><span class="token cBase">)</span>
-        <span class="token cBase">}</span>
-    <span class="token cBase">}</span>
+### Answer
 
-    <span class="token cVar">return</span> <span class="token cMod">quickSort</span><span class="token cBase">(</span>left<span class="token cBase">)</span><span class="token cBase">.</span><span class="token cMod">concat</span><span class="token cBase">(</span>pivot<span class="token cBase">,</span> <span class="token cMod">quickSort</span><span class="token cBase">(</span>right<span class="token cBase">)</span><span class="token cBase">)</span><span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre><p>In-place:</p><pre><code><span class="token cVar">var</span> <span class="token function-variable cMod">quickSort</span> <span class="token cBase">=</span> <span class="token cVar">function</span><span class="token cBase">(</span><span class="token parameter">array<span class="token cBase">,</span> left<span class="token cBase">,</span> right</span><span class="token cBase">)</span> <span class="token cBase">{</span>
+Both **Divide and Conquer** and **Dynamic Programming** are algorithmic paradigms that break problems down into smaller, more manageable sub-problems.
 
-    <span class="token cVar">var</span> leftIndex <span class="token cBase">=</span> <span class="token cMod">partition</span><span class="token cBase">(</span>array<span class="token cBase">,</span> left<span class="token cBase">,</span> right<span class="token cBase">)</span><span class="token cBase">;</span>
+While they share similarities such as the use of **recursion** and the need for an **optimal substructure**, they also differ in key ways.
 
-    <span class="token cVar">if</span> <span class="token cBase">(</span>left <span class="token cBase">&lt;</span> leftIndex <span class="token cBase">-</span> <span class="token cNum">1</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-        <span class="token cMod">quickSort</span><span class="token cBase">(</span>array<span class="token cBase">,</span> left<span class="token cBase">,</span> leftIndex <span class="token cBase">-</span> <span class="token cNum">1</span><span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cBase">}</span>
+### Common Features
 
-    <span class="token cVar">if</span> <span class="token cBase">(</span>right <span class="token cBase">&gt;</span> leftIndex<span class="token cBase">)</span> <span class="token cBase">{</span>
-        <span class="token cMod">quickSort</span><span class="token cBase">(</span>array<span class="token cBase">,</span> leftIndex<span class="token cBase">,</span> right<span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cBase">}</span>
+- **Recursion**: Both paradigms employ recursive techniques.
+- **Optimal Substructure**: Solutions to the overall problem are constructed from optimal solutions of its sub-problems.
+- **Complexity**: Time and space complexities help evaluate algorithmic efficiency.
 
-    <span class="token cVar">return</span> array<span class="token cBase">;</span>
-<span class="token cBase">}</span>
+### Key Distinctions
 
-<span class="token cVar">var</span> <span class="token function-variable cMod">swap</span> <span class="token cBase">=</span> <span class="token cVar">function</span><span class="token cBase">(</span><span class="token parameter">array<span class="token cBase">,</span> left<span class="token cBase">,</span> right</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">var</span> temp<span class="token cBase">;</span>
-    temp <span class="token cBase">=</span> array<span class="token cBase">[</span>leftIndex<span class="token cBase">]</span><span class="token cBase">;</span>
-    array<span class="token cBase">[</span>leftIndex<span class="token cBase">]</span> <span class="token cBase">=</span> array<span class="token cBase">[</span>rightIndex<span class="token cBase">]</span><span class="token cBase">;</span>
-    array<span class="token cBase">[</span>rightIndex<span class="token cBase">]</span> <span class="token cBase">=</span> temp<span class="token cBase">;</span>
-<span class="token cBase">}</span>
+- **Sub-Problems Dependency**: 
+   - Divide and Conquer: Sub-problems are independent.
+   - Dynamic Programming: Sub-problems often overlap and are dependent.
 
-<span class="token cVar">var</span> <span class="token function-variable cMod">partition</span> <span class="token cBase">=</span> <span class="token cVar">function</span><span class="token cBase">(</span><span class="token parameter">array<span class="token cBase">,</span> left<span class="token cBase">,</span> right</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">var</span> pivotIndex <span class="token cBase">=</span> Math<span class="token cBase">.</span><span class="token cMod">floor</span><span class="token cBase">(</span><span class="token cBase">(</span>left <span class="token cBase">+</span> right<span class="token cBase">)</span> <span class="token cBase">/</span> <span class="token cNum">2</span><span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cVar">var</span> pivot <span class="token cBase">=</span> array<span class="token cBase">[</span>pivotIndex<span class="token cBase">]</span><span class="token cBase">;</span>
+- **Intermediate Results**: 
+   - Divide and Conquer: No storage of intermediate outcomes.
+   - Dynamic Programming: Uses memoization or tabulation to store intermediate results, reducing redundant calculations.
 
-    leftIndex <span class="token cBase">=</span> left<span class="token cBase">;</span>
-    rightIndex <span class="token cBase">=</span> right<span class="token cBase">;</span>
+### Code Example: Fibonacci Sequence
 
-    <span class="token cVar">while</span> <span class="token cBase">(</span>leftIndex <span class="token cBase">&lt;=</span> rightIndex<span class="token cBase">)</span> <span class="token cBase">{</span>
-        <span class="token cVar">while</span> <span class="token cBase">(</span>array<span class="token cBase">[</span>leftIndex<span class="token cBase">]</span> <span class="token cBase">&lt;</span> pivot<span class="token cBase">)</span> <span class="token cBase">{</span>
-            leftIndex<span class="token cBase">++</span><span class="token cBase">;</span>
-        <span class="token cBase">}</span>
+Here is the Python code:
 
-        <span class="token cVar">while</span> <span class="token cBase">(</span>array<span class="token cBase">[</span>rightIndex<span class="token cBase">]</span> <span class="token cBase">&gt;</span> pivot<span class="token cBase">)</span> <span class="token cBase">{</span>
-            rightIndex<span class="token cBase">--</span><span class="token cBase">;</span>
-        <span class="token cBase">}</span>
+```python
+# Divide and Conquer for Fibonacci
+def fibonacci_divide_conquer(n):
+    if n <= 1:
+        return n
+    return fibonacci_divide_conquer(n-1) + fibonacci_divide_conquer(n-2)
 
-        <span class="token cVar">if</span> <span class="token cBase">(</span>leftIndex <span class="token cBase">&lt;=</span> rightIndex<span class="token cBase">)</span> <span class="token cBase">{</span>
-            <span class="token cMod">swap</span><span class="token cBase">(</span>array<span class="token cBase">,</span> left<span class="token cBase">,</span> right<span class="token cBase">)</span><span class="token cBase">;</span>
-            leftIndex<span class="token cBase">++</span><span class="token cBase">;</span>
-            rightIndex<span class="token cBase">--</span><span class="token cBase">;</span>
-        <span class="token cBase">}</span>
-    <span class="token cBase">}</span>
-    <span class="token cVar">return</span> leftIndex<span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre></div></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://medium.com/karuna-sehgal/a-quick-explanation-of-quick-sort-7d8e2563629b" rel="noreferrer" target="_blank" title="Explain how QuickSort works Interview Questions Source To Answer">medium.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 6. Explain what is Fibonacci Search technique?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p><strong>Fibonacci search</strong> is a search algorithm based on <strong>divide and conquer</strong> principle that can find an element in the given <strong>sorted array</strong> with the help of Fibonacci series in <code><i>O</i>(<i>log n</i>)</code> time complexity.</p><p>Compared to binary search where the sorted array is divided into two equal-sized parts, one of which is examined further, Fibonacci search divides the array into two <em>unequal parts</em> that have sizes that are <em>consecutive Fibonacci numbers</em>. </p><p>Some facts to note:</p><ul><li>Fibonacci search has the advantage that one only needs addition and subtraction to calculate the indices of the accessed array elements, while classical binary search needs bit-shift, division or multiplication, operations that were less common at the time Fibonacci search was first published</li><li>Binary search works by dividing the seek area in equal parts <code>1:1</code>. 
-Fibonacci search can divide it into parts approaching <code>1:1.618</code> while using the simpler operations.</li><li>On average, Fibonacci search requires 4% more comparisons than binary search</li><li>Fibonacci Search examines relatively closer elements in subsequent steps. So when input array is big that cannot fit in CPU cache or even in RAM, Fibonacci Search can be useful. Thus Fibonacci search may have the advantage over binary search in slightly reducing the average time needed to access a non-uniform access memory storage.</li></ul><p>Let the length of given array be <code>length</code> and the element to be searched be <code>key</code>.</p><p>Steps of Fibonacci Search:</p><ol><li>Find the smallest Fibonacci number <code>F(n)</code> that <code>F(n) - 1 &gt;= length</code></li><li><p><code>F(n) = F(n-1) + F(n-2)</code> =&gt; <code>F(n) - 1 = [ F(n-1) - 1 ] + (1) + [ F(n-2) - 1 ]</code>, where <code>(1)</code> here is for the middle item (the <strong>m</strong> in below figure).</p><pre><code>// |&lt;---------             p: F(n) - 1             ---------&gt;|
-// |&lt;---    q: F(n-1) - 1    ---&gt;|   |&lt;--  r: F(n-2) - 1  --&gt;|
-// +----+---+--------------------+---+---+---+---+
-// |    | k |                    | m |   | k |   |
-// +----+---+--------------------+---+---+---+---+
-//                                 ^</code></pre></li><li><p>If <code>key &lt; m</code>, then search key in <code>q</code> = <code>F(n-1) - 1</code>:</p><pre><code>// |&lt;---    p: F(n-1) - 1    ---&gt;|
-// |&lt;----- q -----&gt;|   |&lt;-- r --&gt;|
-// +----+---+------+---+---------+
-// |    | k |      | m |         |
-// +----+---+------+---+---------+</code></pre><p> for that set <code>p = F(n-1) - 1, q = F(n-2) - 1, r = F(n-3) - 1</code> and repeat the process. Here Fibonacci numbers go <em>backward</em> <strong>once</strong>. These indicate elimination of approximately one-third of the remaining array.</p></li><li><p>If <code>key &gt; m</code>, then repeat then search key in <code>r = F(n-2) - 1</code>:</p><pre><code>// |&lt;--  p: F(n-2) - 1  --&gt;|
-// |&lt;--- q ---&gt;|   |&lt;- r -&gt;|
-// +---+---+---+
-// |   | k |   | m
-// +---+---+---+
-//               ^</code></pre><p> For that, set <code>p = F(n-2) - 1, q = F(n-3) - 1, r = F(n-4) - 1</code> and repeat the process. Here Fibonacci numbers go <em>backward</em> <strong>twice</strong>,  indicating elimination of approximately two-third of the remaining array.</p></li></ol></div></div><div><div class="mb-2 mt-2"><span class="h5">Complexity Analysis</span></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Time:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text selected-complexity effect7">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Space:</div><div class="col text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text selected-complexity effect7">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-large"><p><b>Time:</b> <mark>O(log n)</mark></p><p><b>Space:</b> <mark>O(1)</mark></p></div><div class="mt-3"><div><div class="AnswerBody"><p>Fibonacci search has an average- and worst-case complexity of <code><i>O</i>(<i>log n</i>)</code>. The worst case will occur when we have our target in the larger (2/3) fraction of the array, as we proceed to find it. In other words, we are eliminating the smaller (1/3) fraction of the array every time. We call once for n, then for (2/3) n, then for (4/9) n and henceforth.</p><p></p><div><div><div><div></div></div></div></div><p></p></div></div></div></div><div style="font-size: 14px;"><div class="mb-3 mt-2"><span class="h5">Implementation</span></div><div><nav class="mdc-tab-bar"><div class="mdc-tab-scroller"><div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;"><div class="mdc-tab-scroller__scroll-content"><button class="mdc-ripple-upgraded mdc-ripple-upgraded--background-focused mdc-tab mdc-tab--min-width mdc-tab--active" aria-selected="true" tabindex="0"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>C#</span>&nbsp;<span class="shadow-text lang-badge cs">CS</span></span></div><span class="mdc-tab-indicator mdc-tab-indicator--active"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded mdc-ripple-upgraded--background-focused"></div></button><button class="mdc-ripple-upgraded mdc-tab mdc-tab--min-width"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>JavaScript</span>&nbsp;<span class="shadow-text lang-badge js">JS</span></span></div><span class="mdc-tab-indicator"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded"></div></button><button class="mdc-ripple-upgraded mdc-tab mdc-tab--min-width"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Java</span>&nbsp;<span class="shadow-text lang-badge java">Java</span></span></div><span class="mdc-tab-indicator"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded"></div></button><button class="mdc-ripple-upgraded mdc-tab mdc-tab--min-width"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Python</span>&nbsp;<span class="shadow-text lang-badge py">PY</span></span></div><span class="mdc-tab-indicator"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded"></div></button></div></div></div></nav></div><div class="mt-2"><div class="AnswerBody"><pre><code><span class="token preprocessor cVar">#include &lt;algorithm&gt;</span>
-<span class="token preprocessor cVar">#include &lt;cassert&gt;</span>
-<span class="token preprocessor cVar">#include </span><span class="token cString">"search.h"</span>
+# Dynamic Programming for Fibonacci with memoization
+def fibonacci_memoization(n, memo={}):
+    if n <= 1:
+        return n
+    if n not in memo:
+        memo[n] = fibonacci_memoization(n-1, memo) + fibonacci_memoization(n-2, memo)
+    return memo[n]
+```
 
-typedef <span class="token cVar">struct</span> FibonacciValues
-<span class="token cBase">{</span>
-  <span class="token cComment">// Fibonacci number: F(n) = F(n-1) + F(n-2)</span>
-  <span class="token cVar">int</span> Fn_2<span class="token cBase">;</span> <span class="token cComment">// F(n-2)</span>
-  <span class="token cVar">int</span> Fn_1<span class="token cBase">;</span> <span class="token cComment">// F(n-1)</span>
-  <span class="token cVar">int</span> Fn<span class="token cBase">;</span>   <span class="token cComment">// F(n)</span>
+In this example, `fibonacci_divide_conquer` uses Divide and Conquer without any storage mechanism. `fibonacci_memoization` leverages Dynamic Programming and memoizes results to avoid redundant calculations.
 
-  <span class="token cMod">FibonacciValues</span><span class="token cBase">(</span><span class="token cVar">int</span> fn_2<span class="token cBase">,</span> <span class="token cVar">int</span> fn_1<span class="token cBase">,</span> <span class="token cVar">int</span> fn<span class="token cBase">)</span>
-    <span class="token cBase">:</span> <span class="token cMod">Fn_2</span><span class="token cBase">(</span>fn_2<span class="token cBase">)</span>
-    <span class="token cBase">,</span> <span class="token cMod">Fn_1</span><span class="token cBase">(</span>fn_1<span class="token cBase">)</span>
-    <span class="token cBase">,</span> <span class="token cMod">Fn</span><span class="token cBase">(</span>fn<span class="token cBase">)</span>
-  <span class="token cBase">{</span>
-    <span class="token cMod">assert</span><span class="token cBase">(</span>Fn <span class="token cBase">==</span> Fn_1 <span class="token cBase">+</span> Fn_2<span class="token cBase">)</span><span class="token cBase">;</span>
-  <span class="token cBase">}</span>
+---
 
-  <span class="token cBase">~</span><span class="token cMod">FibonacciValues</span><span class="token cBase">(</span><span class="token cBase">)</span>
-  <span class="token cBase">{</span>
-  <span class="token cBase">}</span>
+## 🔹 2. Compare _Greedy_ vs _Divide & Conquer_ vs _Dynamic Programming_ algorithms.
 
-  <span class="token cVar">void</span> <span class="token cMod">forward</span><span class="token cBase">(</span><span class="token cBase">)</span>
-  <span class="token cBase">{</span>
-    Fn_2 <span class="token cBase">=</span> Fn_1<span class="token cBase">;</span>
-    Fn_1 <span class="token cBase">=</span> Fn<span class="token cBase">;</span>
-    Fn <span class="token cBase">=</span> Fn_1 <span class="token cBase">+</span> Fn_2<span class="token cBase">;</span>
-    <span class="token cMod">assert</span><span class="token cBase">(</span>Fn <span class="token cBase">==</span> Fn_1 <span class="token cBase">+</span> Fn_2<span class="token cBase">)</span><span class="token cBase">;</span>
-  <span class="token cBase">}</span>
+### Answer
 
-  <span class="token cVar">void</span> <span class="token cMod">backward</span><span class="token cBase">(</span><span class="token cBase">)</span>
-  <span class="token cBase">{</span>
-    Fn <span class="token cBase">=</span> Fn_1<span class="token cBase">;</span>
-    Fn_1 <span class="token cBase">=</span> Fn_2<span class="token cBase">;</span>
-    Fn_2 <span class="token cBase">=</span> Fn <span class="token cBase">-</span> Fn_1<span class="token cBase">;</span>
-    <span class="token cMod">assert</span><span class="token cBase">(</span>Fn <span class="token cBase">==</span> Fn_1 <span class="token cBase">+</span> Fn_2<span class="token cBase">)</span><span class="token cBase">;</span>
-  <span class="token cBase">}</span>
+Let's explore how **Greedy**, **Divide & Conquer**, and **Dynamic Programming** algorithms differ across key metrics such as optimality, computational complexity, and memory usage. 
 
-<span class="token cBase">}</span> FibonacciValues<span class="token cBase">;</span>
+### Key Metrics
 
-<span class="token cComment">// Returns the smallest Fibonacci number that is greater than or equal to k.</span>
-<span class="token class-name">FibonacciValues</span> <span class="token cMod">GetFibonacci</span><span class="token cBase">(</span><span class="token cVar">int</span> k<span class="token cBase">)</span>
-<span class="token cBase">{</span>
-  <span class="token class-name">FibonacciValues</span> <span class="token cMod">fib</span><span class="token cBase">(</span><span class="token cNum">0</span><span class="token cBase">,</span> <span class="token cNum">1</span><span class="token cBase">,</span> <span class="token cNum">1</span><span class="token cBase">)</span><span class="token cBase">;</span>
-  <span class="token cVar">while</span> <span class="token cBase">(</span>fib<span class="token cBase">.</span>Fn <span class="token cBase">&lt;</span> k<span class="token cBase">)</span> <span class="token cBase">{</span>
-    fib<span class="token cBase">.</span><span class="token cMod">forward</span><span class="token cBase">(</span><span class="token cBase">)</span><span class="token cBase">;</span>
-  <span class="token cBase">}</span>
-  <span class="token cVar">return</span> fib<span class="token cBase">;</span>
-<span class="token cBase">}</span>
+- **Optimality**: Greedy may not guarantee optimality, while both Divide & Conquer and Dynamic Programming do.
+- **Computational Complexity**: Greedy is generally the fastest; Divide & Conquer varies, and Dynamic Programming can be slower but more accurate.
+- **Memory Usage**: Greedy is most memory-efficient, Divide & Conquer is moderate, and Dynamic Programming can be memory-intensive due to caching.
 
-<span class="token cComment">// Notice that the current middle might exceed the array!</span>
+### Greedy Algorithms
 
-<span class="token cVar">int</span> <span class="token cMod">fibonacciSearch</span><span class="token cBase">(</span><span class="token cVar">int</span> list<span class="token cBase">[</span><span class="token cBase">]</span><span class="token cBase">,</span> <span class="token cVar">const</span> unsigned <span class="token cVar">int</span> length<span class="token cBase">,</span> <span class="token cVar">int</span> key<span class="token cBase">)</span>
-<span class="token cBase">{</span>
-  <span class="token cMod">assert</span><span class="token cBase">(</span>list <span class="token cBase">&amp;&amp;</span> length<span class="token cBase">)</span><span class="token cBase">;</span>
+Choose Greedy algorithms when a **local** best choice leads to a **global** best choice.
 
-  <span class="token cVar">int</span> left <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">,</span> right <span class="token cBase">=</span> length <span class="token cBase">-</span> <span class="token cNum">1</span><span class="token cBase">,</span> middle<span class="token cBase">;</span>
-  <span class="token cComment">// Find a fibonacci number F(n) that F(n) - 1 &gt;= length</span>
-  <span class="token class-name">FibonacciValues</span> fib <span class="token cBase">=</span> <span class="token cMod">GetFibonacci</span><span class="token cBase">(</span>length <span class="token cBase">+</span> <span class="token cNum">1</span><span class="token cBase">)</span><span class="token cBase">;</span>
+#### Use Cases
+- **Shortest Path Algorithms**: Dijkstra's Algorithm for finding the shortest path in a weighted graph.
+- **Text Compression**: Huffman Coding for compressing text files.
+- **Network Routing**: For minimizing delay or cost in computer networks.
+- **Task Scheduling**: For scheduling tasks under specific constraints to optimize for time or cost.
 
-  <span class="token cVar">while</span> <span class="token cBase">(</span>left <span class="token cBase">&lt;=</span> right<span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cComment">// Avoid the middle is over the array.</span>
-    middle <span class="token cBase">=</span> std<span class="token cBase">::</span><span class="token cMod">min</span><span class="token cBase">(</span>left <span class="token cBase">+</span> <span class="token cBase">(</span>fib<span class="token cBase">.</span>Fn_1 <span class="token cBase">-</span> <span class="token cNum">1</span><span class="token cBase">)</span><span class="token cBase">,</span> right<span class="token cBase">)</span><span class="token cBase">;</span>
+### Divide & Conquer Algorithms
 
-    <span class="token cVar">if</span> <span class="token cBase">(</span>list<span class="token cBase">[</span>middle<span class="token cBase">]</span> <span class="token cBase">==</span> key<span class="token cBase">)</span> <span class="token cBase">{</span>
-      <span class="token cVar">return</span> middle<span class="token cBase">;</span>
-    <span class="token cBase">}</span> <span class="token cVar">else</span> <span class="token cVar">if</span> <span class="token cBase">(</span>list<span class="token cBase">[</span>middle<span class="token cBase">]</span> <span class="token cBase">&gt;</span> key<span class="token cBase">)</span> <span class="token cBase">{</span>
-      right <span class="token cBase">=</span> middle <span class="token cBase">-</span> <span class="token cNum">1</span><span class="token cBase">;</span>
-      fib<span class="token cBase">.</span><span class="token cMod">backward</span><span class="token cBase">(</span><span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cBase">}</span> <span class="token cVar">else</span> <span class="token cBase">{</span> <span class="token cComment">// list[middle] &lt; key</span>
-      left <span class="token cBase">=</span> middle <span class="token cBase">+</span> <span class="token cNum">1</span><span class="token cBase">;</span>
-      fib<span class="token cBase">.</span><span class="token cMod">backward</span><span class="token cBase">(</span><span class="token cBase">)</span><span class="token cBase">;</span> fib<span class="token cBase">.</span><span class="token cMod">backward</span><span class="token cBase">(</span><span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cBase">}</span>
-  <span class="token cBase">}</span>
+Opt for Divide & Conquer when you can solve **independent subproblems** and combine them for the **global optimum**.
 
-  <span class="token cVar">return</span> NOT_FOUND<span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre></div></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://gist.github.com/ChunMinChang/ab8650e04f467a8b4f38da807a0d5797" rel="noreferrer" target="_blank" title="Explain what is Fibonacci Search technique? Interview Questions Source To Answer">gist.github.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div> <div data-v-5e9078c0="" class="end"></div> <br data-v-5e9078c0="">
-    Thanks 🙌 for reading and good luck on your next tech interview!
-    <br data-v-5e9078c0="">
-    Explore 3800+ dev interview question here 👉
-    <a data-v-5e9078c0="" href="https://devinterview.io/">Devinterview.io</a></div> <!----></div>
+#### Use Cases
+
+- **Sorting Algorithms**: Quick sort and Merge sort for efficient sorting of lists or arrays.
+- **Search Algorithms**: Binary search for finding an element in a sorted list.
+- **Matrix Multiplication**: Strassen's algorithm for faster matrix multiplication.
+- **Computational Geometry**: Algorithms for solving geometric problems like finding the closest pair of points.
+
+### Dynamic Programming Algorithms
+
+Choose Dynamic Programming when overlapping subproblems can be **solved once and reused**.
+
+#### Use Cases
+
+- **Optimal Path Problems**: Finding the most cost-efficient path in a grid or graph, such as in the Floyd-Warshall algorithm.
+- **Text Comparison**: Algorithms like the Levenshtein distance for spell checking and DNA sequence alignment.
+- **Resource Allocation**: Knapsack problem for optimal resource allocation under constraints.
+- **Game Theory**: Minimax algorithm for decision-making in two-player games.
+
+---
+
+## 🔹 3. What is _Merge Sort_?
+
+### Answer
+
+**Merge Sort** is a robust and efficient divide-and-conquer sorting algorithm. It breaks down a list into numerous sublists until each sublist consists of a single element and then merges these sublists in a sorted manner.
+
+### Key Characteristics
+
+- **Divide and Conquer**: Segments the list recursively into halves until individual elements are achieved.
+- **Stable**: Maintains the order of equal elements.
+- **External**: Requires additional memory space, leading to a linear space complexity $O(n)$.
+- **Non-Adaptive**: Does not benefit from existing order in a dataset.
+
+### Advantages
+
+- **Consistent Performance**: Merge Sort guarantees a time complexity of $O(n \log n)$ across best, average, and worst-case scenarios.
+- **Parallelizable**: Its design allows for efficient parallelization in multi-core systems.
+- **Widely Used**: Due to its reliable performance, it's employed in many systems, including the `sort()` function in some programming languages.
+
+### Algorithm Steps
+
+1. **Divide**: If the list has more than one element, split the list into two halves.
+2. **Conquer**: Recursively sort both halves.
+3. **Merge**: Combine (merge) the sorted halves to produce a single sorted list.
+
+### Visual Representation
+
+![Merge Sort](https://firebasestorage.googleapis.com/v0/b/dev-stack-app.appspot.com/o/sorting%2Fmerge-sort.gif?alt=media&token=be2696ee-995c-4a6c-bf59-3a59f04537ab&_gl=1*awpwyi*_ga*OTYzMjY5NTkwLjE2ODg4NDM4Njg.*_ga_CW55HF8NVT*MTY5NjUyOTYzNy4xNDUuMS4xNjk2NTMwMzk3LjU1LjAuMA..)
+
+### Complexity Analysis
+
+- **Time Complexity**: Best, Average, and Worst Case: $O(n \log n)$ - Due to the consistent halving and merging process.
+- **Space Complexity**: $O(n)$ - Additional space is required for the merging process.
+
+### Code Example: Merge Sort
+
+Here is the Python code:
+
+```python
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left = arr[:mid]
+        right = arr[mid:]
+
+        merge_sort(left)
+        merge_sort(right)
+
+        i = j = k = 0
+
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                arr[k] = left[i]
+                i += 1
+            else:
+                arr[k] = right[j]
+                j += 1
+            k += 1
+
+        while i < len(left):
+            arr[k] = left[i]
+            i += 1
+            k += 1
+
+        while j < len(right):
+            arr[k] = right[j]
+            j += 1
+            k += 1
+
+    return arr
+```
+
+---
+
+## 🔹 4. What is _QuickSort_?
+
+### Answer
+
+**QuickSort** is a highly efficient divide-and-conquer sorting algorithm that partitions an array into subarrays using a **pivot element**, separating elements less than and greater than the pivot.
+
+### Key Characteristics
+
+- **Divide and Conquer**: Uses a pivot to partition the array into two parts and then sorts them independently.
+- **In-Place**: Requires minimal additional memory, having a space complexity of $O(\log n)$ due to recursive call stack.
+- **Unstable**: Does not maintain the relative order of equal elements.
+
+### Advantages
+
+- **Versatile**: Can be tweaked for better performance in real-world situations.
+- **Cache-Friendly**: Often exhibits good cache performance due to its in-place nature.
+- **Parallelizable**: Its divide-and-conquer nature allows for efficient parallelization in multi-core systems.
+
+### Disadvantages
+
+- **Worst-Case Performance**: QuickSort has a worst-case time complexity of $O(n^2)$, although this behavior is rare, especially with good pivot selection strategies.
+
+### Algorithm Steps
+
+1. **Pivot Selection**: Choose an element from the array as the pivot. 
+2. **Partitioning**: Reorder the array so that all elements smaller than the pivot come before, while all elements greater come after it. The pivot is then in its sorted position.
+3. **Recursive Sort**: Recursively apply the above steps to the two sub-arrays (elements smaller than the pivot and elements greater than the pivot).
+
+### Visual Representation
+
+![QuickSort](https://firebasestorage.googleapis.com/v0/b/dev-stack-app.appspot.com/o/sorting%2Fquicksort.gif?alt=media&token=b1ee3faa-a89b-4587-b310-8ed000109b6d&_gl=1*dd0j8*_ga*OTYzMjY5NTkwLjE2ODg4NDM4Njg.*_ga_CW55HF8NVT*MTY5NjUyOTYzNy4xNDUuMS4xNjk2NTMwNzY0LjU0LjAuMA..)
+
+### Complexity Analysis
+
+- **Time Complexity**:
+  - Best and Average Case: $O(n \log n)$ - When the partition process divides the array evenly.
+  - Worst Case: $O(n^2)$ - When the partition process divides the array into one element and $n-1$ elements, typically when the list is already sorted.
+- **Space Complexity**: $O(\log n)$ - Due to the recursive call stack.
+
+### Code Example: QuickSort
+
+Here is the Python code:
+
+```python
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quick_sort(left) + middle + quick_sort(right)
+```
+
+---
+## 🔹 5. Explain what is _Fibonacci Search_ technique.
+
+### Answer
+
+👉🏼 Check out all 6 answers here: [Devinterview.io - Divide & Conquer](https://devinterview.io/data/divideAndConquer-interview-questions)
+
+---
+
+## 🔹 6. Convert a _Binary Tree_ into a _Doubly Linked List_.
+
+### Answer
+
+👉🏼 Check out all 6 answers here: [Devinterview.io - Divide & Conquer](https://devinterview.io/data/divideAndConquer-interview-questions)
+
+---
+
